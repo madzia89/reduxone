@@ -3,8 +3,8 @@ const INC = 'counter/INC'
 const DEC = 'counter/DEC'
 
 //action creators declarations - funkcja pomocnicza abyśmy w dispatchu nie musieli tworzyć obiektu
-export const inc = () => ({type: INC}) // to zwraca akcję
-export const dec = () => ({type: DEC})
+export const inc = (value) => ({type: INC, value})
+export const dec = (value) => ({type: DEC, value})
 
 //initial state stan zanim jakakolwiek akcja będzie dispatched
 const initialState = 0
@@ -16,9 +16,9 @@ const initialState = 0
 export default (state = initialState, action) => {
     switch (action.type) {
         case INC:
-            return state + 1
+            return state + action.value
         case DEC:
-            return state - 1
+            return state - action.value
 
         //return mówi co robić gdy inne akcje będą miały miejsce niż INC i DEC, w tym przypadku default zwraca stan sprzed akcji dla tego reducera
         default:

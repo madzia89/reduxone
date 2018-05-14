@@ -2,7 +2,7 @@ import {createStore, combineReducers} from 'redux'
 import counterReducer, {inc, dec} from './state/counter'
 
 const reducer = combineReducers({
-    counter: counterReducer,
+    counter: counterReducer, //counter w tym miejscu mówi reducerowi że to jest stan  w counterReducer
 })
 
 const store = createStore(
@@ -12,5 +12,5 @@ const store = createStore(
 
 //metoda do dispatchowania
 //dispatch jest tym co przyjmuje akcję i przekazuje je do reducerów
-window.inc = () => store.dispatch(inc()) //musimy tutaj wywołać inc, bo inc jest action creator który zwraca akcję a my właśnie chcemy akcję a nie jego kreatora
-window.dec = () => store.dispatch(dec())
+window.inc = (value) => store.dispatch(inc(value)) //musimy tutaj wywołać inc, bo inc jest action creator który zwraca akcję a my właśnie chcemy akcję a nie jego kreatora
+window.dec = (value) => store.dispatch(dec(value))
