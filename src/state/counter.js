@@ -3,8 +3,8 @@ const INC = 'counter/INC'
 const DEC = 'counter/DEC'
 
 //action creators declarations - funkcja pomocnicza abyśmy w dispatchu nie musieli tworzyć obiektu
-const ins = () => ({type: INC})
-const dec = () => ({type: DEC})
+export const inc = () => ({type: INC}) // to zwraca akcję
+export const dec = () => ({type: DEC})
 
 //initial state stan zanim jakakolwiek akcja będzie dispatched
 const initialState = 0
