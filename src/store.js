@@ -12,7 +12,5 @@ const store = createStore(
 
 //metoda do dispatchowania
 //dispatch jest tym co przyjmuje akcję i przekazuje je do reducerów
-store.dispatch(inc()) //musimy tutaj wywołać inc, bo inc jest action creator który zwraca akcję a my właśnie chcemy akcję a nie jego kreatora
-store.dispatch(inc())
-store.dispatch(inc())
-store.dispatch(dec())
+window.inc = () => store.dispatch(inc()) //musimy tutaj wywołać inc, bo inc jest action creator który zwraca akcję a my właśnie chcemy akcję a nie jego kreatora
+window.dec = () => store.dispatch(dec())
