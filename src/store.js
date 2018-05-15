@@ -23,4 +23,4 @@ window.addTask = (taskText) => store.dispatch(add(taskText))
 window.delTask = (index) => store.dispatch(del(index))
 
 store.dispatch(incCounter2())
-store.dispatch(incCounter2())
+store.dispatch(decCounter2())
