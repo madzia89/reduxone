@@ -21,6 +21,7 @@ window.dec = (value) => store.dispatch(dec(value))
 
 window.addTask = (taskText) => store.dispatch(add(taskText))
 window.delTask = (index) => store.dispatch(del(index))
+store.dispatch(add('Task one'))
 
 // store.dispatch(incCounter2())
 // store.dispatch(decCounter2())
