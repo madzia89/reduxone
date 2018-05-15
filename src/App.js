@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import Controls from './Components/Counter'
+import CounterControls from './Components/CounterControls'
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1>aa</h1>
-                <Controls/>
+
+                <CounterControls/>
 
             </div>
         )
