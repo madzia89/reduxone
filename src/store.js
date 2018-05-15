@@ -3,13 +3,13 @@ import counter, {inc, dec} from './state/counter'
 import todos, {add, del} from './state/todos'
 // import counter2, {inc as incCounter2, dec as decCounter2} from './state/counter2'
 
-const reducer = combineReducers({
+export const reducer = combineReducers({
     counter, //counter w tym miejscu mówi reducerowi że to jest stan counter
     todos,
     // counter2
 })
 
-const store = createStore(
+export const store = createStore(
     reducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
