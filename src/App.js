@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import CounterControls from './Components/CounterControls'
 import Paper from 'material-ui/Paper'
 import ToDoList from './Components/ToDoList'
+import Text from './Components/Text'
 
 
 class App extends Component {
@@ -20,7 +21,11 @@ class App extends Component {
                 <div className={'deleteDiv'}>
                     <ToDoList/>
                 </div>
+                <div>
+                    <Text/>
+                </div>
             </div>
+
 
         )
     }
