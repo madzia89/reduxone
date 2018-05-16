@@ -28,8 +28,6 @@ export const store = createStore(
 store.dispatch(initCounterSync())
 
 
-
-
 //
 // //metoda do dispatchowania
 // //dispatch jest tym co przyjmuje akcję i przekazuje je do reducerów

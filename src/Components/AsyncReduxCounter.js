@@ -1,8 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import RaisedButton from 'material-ui/RaisedButton'
-import asyncReduxCounter, {set} from '../state/asyncReduxCounter'
-
+import asyncReduxCounter, {inc, dec} from '../state/asyncReduxCounter'
 
 
 const ToDo = (props) => (
@@ -11,7 +10,11 @@ const ToDo = (props) => (
             {props.asyncCounterValue}
         </h1>
         <RaisedButton
-            onClick={props.onSetClick}
+            onClick={props.onDecClick}
+            label={'-'}
+        />
+        <RaisedButton
+            onClick={props.onIncClick}
             label={'+'}
         />
 
@@ -23,7 +26,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    onSetClick: () => dispatch(set())
+    onIncClick: () => dispatch(inc()),
+    onDecClick: () => dispatch(dec())
 })
 
 export default connect(
