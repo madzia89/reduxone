@@ -34,7 +34,7 @@ export const initCounterSync = () => (dispatch, getState) => {
 }
 
 const initialState = {
-    asyncCounterValue: 0
+    asyncCounterValue: null
 }
 
 export default (state = initialState, action) => {

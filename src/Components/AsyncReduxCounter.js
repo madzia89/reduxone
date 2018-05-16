@@ -5,6 +5,9 @@ import asyncReduxCounter, {inc, dec} from '../state/asyncReduxCounter'
 
 
 const ToDo = (props) => (
+    props.asyncCounterValue === null ?
+        'Loading...'
+        :
     <div>
         <h1>
             {props.asyncCounterValue}
