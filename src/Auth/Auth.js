@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import LogInByGoogle from "./LogInByGoogle";
-import { logInByGoogle } from '../../state/auth'
+import { logInByGoogle } from '../state/auth' //odpowiada za logowanie googlem
 
 const Auth = (props) => (
     <div>
@@ -11,7 +11,7 @@ const Auth = (props) => (
                 props.children
                 :
                 <LogInByGoogle
-                    onLogInHandler={}
+                    onLogInHandler={props.logInByGoogle}
                 />
         }
     </div>
