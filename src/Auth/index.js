@@ -1,0 +1,1 @@
+export {default} from './Auth' // defaultowo z folderu Auth ma być eksportowany plik Auth
